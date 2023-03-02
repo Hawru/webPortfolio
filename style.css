@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Viga&display=swap');
+/* RESET CSS */
+*{
+    box-sizing: border-box;
+    font-family: 'Quicksand';
+    margin: 0;
+    padding: 0;
+}
+
+/* VARIABLES */
+:root{
+    --dark-color: #181823;
+    --blue-dark-color: #537FE7;
+    --blue-light-color: #C0EEF2;
+    --skye-color: #E9F8F9;
+} 
+/* SCROLL */
+html{
+    scroll-behavior: smooth;
+}
+/* HEADER */
+.container-header {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-color);
+}
+.container-header header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 15px;
+    margin: auto;
+    max-width: 1200px;
+}
+.container-header .logo a{
+    font-family: 'Viga';
+    font-weight: 800;
+    color: #537FE7;
+    text-decoration: none;
+    font-size: 30px;
+}
+.container-header .logo a:hover{
+    color: var(--blue-light-color);
+}
+
+.container-header #nav ul{
+    list-style: none;
+    display: flex;
+}
+
+.container-header #nav ul li a{
+    text-decoration: none;
+    color: #C0EEF2;
+    margin: 0px 10px;
+    font-size: 19px;
+}
+.container-header #nav ul li a:hover{
+    color: var(--blue-dark-color);
+}
+
+
+.container-header #hamburger{
+    display: none;
+    font-size: 30px;
+    color: var(--blue-light-color);
+    cursor: pointer;
+}
+/* HOME */
+.Home{
+    height: 100vh;
+    background: linear-gradient(rgb(24, 24, 35, .8), rgb(24, 24, 35, .05)), url(./img/wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: var(--skye-color);
+}
+.Home .card{
+    max-width: 400px;
+    margin: auto;
+    background-color: var(--dark-color);
+    border-radius: 20px;
+    text-align: center;
+}
+.Home h1{
+    font-family: 'Viga';
+    margin-top: 10px;
+}
+.Home h2{
+    font-size: 20px;
+}
+.Home .card .image{
+    padding-top: 20px;
+}
+
+.Home .card img{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    border: var(--blue-light-color) solid 5px;
+}
+
+.Home .card .social{
+    margin: 10px;
+    font-size: 32px;
+}
+
+.Home .card .social ul{
+    width: 200px;
+    margin: auto;
+    list-style-type: none;
+}
+
+.Home .card .social ul li{
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    color: var(--skye-color);
+    border-radius: 100%;
+    border: var(--skye-color) 1px solid;
+    
+}
+
+.Home .card .social ul li a{
+    color: var(--skye-color);
+    display: block;
+    margin: 5px;
+}
+
+/* ABOUT */
+.About{
+    height: 40vh;
+    color: var(--skye-color);
+    background-color: var(--dark-color);
+    display: flex;
+}
+
+.About .container-about{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.About .container-about h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Viga';
+    margin-bottom: 20px;
+}
+
+.About .container-about p{
+    margin: 0px 15px;
+}
+
+.About .container-about .grip-di{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+}
+
+.About .container-about .grip-di h3{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Viga';
+}
+
+.About .container-about .grip-di ul{
+    list-style-type: none;
+    margin: 0px 15px;
+}
+.About .container-about .dates strong{
+    display: inline-block;
+    width: 100px;
+}
+.About .container-about .dates ul{
+    margin-top: 20px;
+}
+.About .container-about .interest ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+.About .container-about .interest li i{
+    font-size: 30px;
+}
+
+.About .container-about .interest li{
+    display: flex;
+    flex-direction: column;
+    color: var(--dark-color);
+    border-radius: 10%;
+    padding: 10px 0;
+    background-color: var(--skye-color);
+}
+.About .container-about button{
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 35px auto 0px auto;
+    border: var(--skye-color) solid 2px;
+    background-color: transparent;
+    color: var(--skye-color);
+    font-weight: 500;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+}
+.About .container-about button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    font-weight: 800;
+    font-size: 20px;
+    border: var(--skye-color) solid 1px;
+    background-color: var(--skye-color);
+    z-index: -1;
+    transition: 1s;
+}
+.About .container-about button:hover{
+    color: var(--dark-color);
+ }
+.About .container-about button:hover .overlay{
+   width: 100%;
+   height: 100%;
+   color: var(--dark-color);
+}
+
+/* SKILLS */
+
+.Skills .container-skills{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.Skills{
+    height: 50vh;
+    color: var(--skye-color);
+    background-color: var(--dark-color);
+}
+
+.Skills .container-skills h2{
+    font-size: 40px;
+    font-family: 'Viga';
+    text-align: center;
+}
+
+.Skills .container-skills .grid-tp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+    gap: 40px;
+}
+
+.Skills .container-skills .grid-tp h3{
+    font-family: 'Viga';
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.Skills .container-skills .title-skill{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.Skills .container-skills  .bar-skill{
+    position: relative;
+    width: 80%;
+    height: 10px;
+    background-color: var(--skye-color);
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.Skills .container-skills .percent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    border-radius: 30px;
+    background-color: var(--blue-dark-color);
+}
+.Skills .container-skills .bar-skill .percent span{
+    height: 38px;
+    width: 38px;
+    top: -15px;
+    right: -8px;
+    border-radius: 50%;
+    background-color: var(--blue-dark-color);
+    text-align: center;
+    line-height: 38px;
+    font-size: 14px;
+    position: absolute;
+}
+
+/* CONTACT */ 
+
+.Contact{
+    height: fit-content;
+    background-color: var(--dark-color);
+    color: var(--skye-color);
+    padding-bottom: 20px;
+}
+
+.Contact .container-contact{
+    max-width: 1000px;
+    margin: auto;
+}
+.Contact .container-contact h2{
+    font-size: 40px;
+    font-family: 'Viga';
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Contact .form-contact input{
+    width: 50%;
+    display: block;
+    margin: auto;
+    height: 30px;
+    background-color: var(--skye-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.Contact .form-contact textarea{
+    width: 50%;
+    display: block;
+    margin: auto;
+    height: 120px;
+    background-color: var(--skye-color);
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bolder;
+}
+.Contact .form-contact button{
+    width: 50%;
+    display: block;
+    margin: auto;
+    height: 30px;
+    background-color: var(--blue-light-color);
+    border-radius: 10px;
+    margin-top: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.Contact .form-contact button:hover{
+    background-color: var(--skye-color);
+}
+
+/* SKILLS ANIMATION */
+.Skills .container-skills .skill-1{
+    width: 0%;
+    animation: 2s skill-1 forwards;
+}
+
+@keyframes skill-1{
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+.Skills .container-skills .skill-2{
+    width: 0%;
+    animation: 2s skill-2 forwards;
+}
+
+@keyframes skill-2{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+.Skills .container-skills .skill-3{
+    width: 0%;
+    animation: 2s skill-3 forwards;
+}
+
+@keyframes skill-3{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+.Skills .container-skills .skill-4{
+    width: 0%;
+    animation: 2s skill-4 forwards;
+}
+
+@keyframes skill-4{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+.Skills .container-skills .skill-5{
+    width: 0%;
+    animation: 2s skill-5 forwards;
+}
+
+@keyframes skill-5{
+    0%{width: 0%;}
+    100%{width: 55%;}
+}
+.Skills .container-skills .skill-6{
+    width: 0%;
+    animation: 2s skill-6 forwards;
+}
+
+@keyframes skill-6{
+    0%{width: 0%;}
+    100%{width: 40%;}
+}
+.Skills .container-skills .skill-7{
+    width: 0%;
+    animation: 2s skill-7 forwards;
+}
+
+@keyframes skill-7{
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+.Skills .container-skills .skill-8{
+    width: 0%;
+    animation: 2s skill-8 forwards;
+}
+
+@keyframes skill-8{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+.Skills .container-skills .skill-9{
+    width: 0%;
+    animation: 2s skill-9 forwards;
+}
+
+@keyframes skill-9{
+    0%{width: 0%;}
+    100%{width: 65%;}
+}
+
+.Skills .container-skills .skill-10{
+    width: 0%;
+    animation: 2s skill-10 forwards;
+}
+
+@keyframes skill-10{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+/* RESPONSIVE */
+
+@media screen and (max-width: 770px) {
+    .container-header #hamburger{
+        display: block;
+    }
+    .container-header nav{
+        display: none;
+    }
+    .About .container-about .grip-di{
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+    }
+    .About{
+        height: fit-content;
+    }
+    .Skills .container-skills .grid-tp{
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+        padding: 0px 20px;
+    }
+    .Skills{
+        height: fit-content;
+    }
+    .Contact .container-contact{
+        width: 100%;
+    }
+
+    .Contact .form-contact input, .Contact .form-contact button, .Contact .form-contact textarea{
+        width: 80%;
+    }
+    .Skills .container-skills h2{
+        padding-top: 40px;
+    }
+
+    nav.floatingNav{
+        display: block;
+        position: absolute;
+        width: 120px;
+        top: 60px;
+        right: 10px;
+        background-color: var(--dark-color);
+        border: var(--blue-light-color) 1px solid;
+        border-radius: 10px;
+    }
+    nav.floatingNav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav.floatingNav ul li{
+        padding-bottom: 4px;
+        border-bottom: var(--blue-light-color) 1px solid;
+    }
+    nav.floatingNav ul li:last-of-type {
+        padding-bottom: 4px;
+        border-bottom: none;
+    }
+    
+}
+
+@media screen and (max-width: 350px){
+    .About .container-about .interest ul{
+        grid-template-columns: 1fr 1fr;     
+    }
+}

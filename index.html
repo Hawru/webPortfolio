@@ -4,23 +4,208 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9a01a81aef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-header">
         <header>
             <div class="logo">
-                <a href="#">Julian V.</a>
+                <a href="#">Julian V</a>
             </div>
-            <nav id="nav">
+            <nav id="nav" class="" onclick="hideNav()">
                 <ul>
-                    <li><a href="#Home"></a> Home</li>
-                    <li>About Me</li>
-                    <li>Skills</li>
-                    <li>Contact</li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About">About Me</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
+            </nav>
+            <nav id="hamburger" onclick="showNav()">
+                <i class="fa-solid fa-bars"></i>
             </nav>
         </header>
     </div>
+    <section id="Home" class="Home">
+        <div class="card">
+            <div class="image">
+                <img src="./img/fotoperfil2.jpg" alt="Profile photo" srcset="">
+            </div>
+            <h1>Julian Valencia</h1>
+            <h2>Web Developer Full Stack</h2>
+            <div class="social">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="About" id="About">
+        <div class="container-about">
+            <h2>About Me</h2>
+            <p>Web developer full stack with knowledge in programming technologies HTML, CSS, Javascript, Node.js, Express, React.js, MySQL, Sequelize, JWTUnit, 
+                TEST (Mocha - Jest - chai), Git - github, EJS.
+                <br>
+                Passionate about programming and willing to learn more through online courses and videos
+            </p>
+            <div class="grip-di">
+                <div class="dates">
+                    <h3>Personal Dates</h3>
+                    <ul>
+                        <li> 
+                            <strong>Phone</strong>
+                            <span>+57 3194132001</span>
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            <span>julianvalenciat02@gmail.com</span>
+                        </li>
+                        <li>
+                            <strong>Country</strong>
+                            <span>Colombia</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="interest">
+                    <h3>Interest</h3>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-volleyball"></i>
+                            <span>VolleyBall</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>Games</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-book"></i>
+                            <span>Learning</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-code"></i>
+                            <span>Programming</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="button-cv">
+                Download CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>           
+        </div>
+    </section>
+    <section id="Skills" class="Skills">
+        <div class="container-skills">
+            <h2>Skills</h2>
+            <div class="grid-tp">
+                <div class="technical-skills">
+                    <h3>Technical Skills</h3>
+                    <div id="skill">
+                        <span class="title-skill">HTML</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>75%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">CSS</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>65%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">JavaScript</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>70%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">React</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>40%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">Mysql</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>55%</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="professional-skills">
+                    <h3>Professional Skills</h3>
+                    <div id="skill">
+                        <span class="title-skill">Communication</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>40%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">Teamwork</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>60%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">Flexibility</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>80%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">Creative</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>65%</span>
+                            </div>
+                        </div> 
+                    </div>
+                    <div id="skill">
+                        <span class="title-skill">Problem-solving</span>
+                        <div class="bar-skill">
+                            <div class="percent">
+                                <span>80%</span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Contact" class="Contact">
+        <div class="container-contact">
+            <h2>Contact</h2>
+            <div class="form-contact">
+                <input type="text" name="name" id="" placeholder="Name">
+                <input type="email" name="email" id="" placeholder="Email">
+                <input type="text" name="phone" id="" placeholder="Phone">
+                <input type="text" name="subject" id="" placeholder="Subject">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <button class="send">
+                    Send Message
+                    <i class="fa-sharp fa-regular fa-paper-plane"></i>
+                    <span class="overlay-send"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
 </html>
